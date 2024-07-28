@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Centered Image</title>
+  <style>
+    @font-face {
+      font-family: 'Junegull';
+      src: url('Junegull.ttf') format('truetype'); /* Замените 'Junegull.ttf' на имя вашего шрифта */
+    }
+
+    body {
+      background-color: black; /* Черный фон */
+      display: flex;
+      flex-direction: column; /* Сделаем элементы в столбец */
+      align-items: center; /* Выравниваем по центру */
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Скрываем полосы прокрутки */
+      font-family: 'Junegull', sans-serif; /* Устанавливаем шрифт по умолчанию */
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-around; /* Распределяем элементы равномерно */
+      width: 90%; /* Задаем ширину для адаптивности */
+      margin-top: 20px; /* Отступ сверху */
+    }
+
+    .top-nav a {
+      text-decoration: none; /* Убираем подчеркивание */
+      color: white; /* Белый цвет текста */
+      font-size: 16px;
+      padding: 10px; /* Отступы для удобства */
+      transition: background-color 0.3s ease; /* Плавный переход цвета */
+    }
+
+    .top-nav a:hover {
+      background-color: #000000; /* Зеленый цвет при наведении */
+    }
+
+    img {
+      display: block; /* Для корректного центрирования */
+      max-width: 90%; /* Максимальная ширина изображения, чтобы оно не выходило за пределы экрана */
+      max-height: 90%; /* Максимальная высота изображения, чтобы оно не выходило за пределы экрана */
+      margin: 20px auto; /* Отступ сверху и снизу, авто-выравнивание по центру */
+      animation: zoomOut 4s linear infinite; /* Анимация */
+    }
+
+    @keyframes zoomOut {
+      0% {
+        transform: scale(1);
+      }
+      10% {
+        transform: scale(1.1); /* Отдаление на 10% */
+      }
+      20% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .message {
+      font-size: 24px; /* Увеличили размер шрифта */
+      color: white; /* Белый цвет текста */
+      margin-bottom: 20px; /* Отступ снизу */
+      font-family: 'Junegull', sans-serif; /* Устанавливаем шрифт */
+      text-align: center; /* Центрируем текст */
+      animation: glow 1s ease-in-out infinite; /* Добавляем анимацию свечения */
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px white;
+      }
+      50% {
+        text-shadow: 0 0 20px rgb(255, 255, 255); /* Меняем цвет свечения */
+      }
+      100% {
+        text-shadow: 0 0 10px white;
+      }
+    }
+
+    button {
+      background-color: white; /* Белый фон */
+      border: none;
+      color: black; /* Черный цвет текста */
+      padding: 15px 20px; /* Уменьшенный горизонтальный отступ */
+      text-align: center;
+      text-decoration: none;
+      display: block; /* Занимаем всю ширину */
+      font-size: 16px; 
+      margin-top: 20px; /* Отступ сверху увеличен до 20px */
+      border-radius: 30px; /* Овальный */
+      cursor: pointer;
+      width: 70%; /* Задаем ширину 70% для адаптивности */
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Junegull', sans-serif; /* Устанавливаем шрифт для кнопки */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем переходы */
+    }
+
+    button:hover {
+      transform: scale(1.05); /* Увеличиваем размер при наведении */
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <a href="https://t.me/dogs_community">About</a>
+    <a href="https://t.me/dogs_community">Swap</a>
+    <a href="https://t.me/dogs_community">More</a>
+  </div>
+  <img src="b8f288.jpg" alt="Centered Image">
+
+  <div class="message">Ты получил</div>
+
+  <div class="message">✨ 5.000.000 DOGS ✨</div>
+
+
+  <button>Получить dogs</button>
+</body>
+</html>
